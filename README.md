@@ -1,2 +1,2 @@
 # ecommerce
-this is the ecommerce with my friend melad mgdy who is cool man
+Okay i will make some changes.
