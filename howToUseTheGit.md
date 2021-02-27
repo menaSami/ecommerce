@@ -19,3 +19,8 @@ git pull
 git add *
 git commit -m "any commit you want"
 git push
+
+## to delete file or folder
+git rm -r "folder name" ### some thig like git rm css/* --dry-run ###
+git commit -m "any commit you want"
+git push
