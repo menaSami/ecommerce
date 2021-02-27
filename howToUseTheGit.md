@@ -4,13 +4,18 @@ git clone https://github.com/menaSami/ecommerce
 cd ecommerce/
 git config --list
 
-git config --global credential.helper 
+git config --global credential.helper
 
 git config --global user.name "your user"
 git config --global user.email youremail@example.com
 git config --global github.user "your user"
 git config --global github.token "your password"
 git config --list
+
+git config user.name "your user"
+git config user.email youremail@example.com
+cat .git/config
+
 
 ## to pull files
 git pull
