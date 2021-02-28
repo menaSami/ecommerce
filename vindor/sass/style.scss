@@ -1,22 +1,23 @@
-/*!
- * project v1.0 Copyright &copy; 2021
- * All Desgin &amp; code by melad & mena | www.jesus.com
- */
+//Start The Varible Of Sass
+@import 'library/function.scss';
+$maincolor: #6195FF;
+//The Freamwork
 body {
   overflow-x: hidden;
   scroll-behavior: smooth;
   background-color: white;
 }
-
 *, *:after, *:before {
   box-sizing: border-box;
 }
 
-.container {
+
+.container{
   width: 80%;
   margin: 0 auto;
 }
 
-.clearfix {
-  clear: both;
-}
+
+.clearfix {clear: both;}
+
+//start the keyframes
