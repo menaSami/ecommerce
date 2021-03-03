@@ -1,4 +1,4 @@
 /*!
  * project v1.0 Copyright &copy; 2021
  * All Desgin &amp; code by melad & mena | www.jesus.com
- */body{overflow-x:hidden;scroll-behavior:smooth;background-color:#fff}*,:after,:before{box-sizing:border-box}.container{width:80%;margin:0 auto}.clearfix{clear:both}
+ */body{overflow-x:hidden;scroll-behavior:smooth;background-color:#fff}*,:after,:before{box-sizing:border-box}.container{width:80%;margin:0 auto}.navbar{display:flex;justify-content:space-between}.navbar .lang-call-us{display:flex}.navbar .lang-call-us #lang{margin-right:30px}.navbar .logo{font-size:16px}.navbar .search-chart-account{display:flex}.navbar .search-chart-account p svg{margin-right:20px}.navbar .search-chart-account p #acc{margin-left:20px}.clearfix{clear:both}
