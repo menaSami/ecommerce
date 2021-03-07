@@ -17,6 +17,10 @@ body {
   margin: 0 auto;
 }
 
+hr {
+  margin-top: -10px;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -26,24 +30,75 @@ body {
   display: flex;
 }
 
+.navbar .lang-call-us img {
+  margin-top: 11px;
+  width: 30px;
+  height: 30px;
+}
+
 .navbar .lang-call-us #lang {
   margin-right: 30px;
+  border: none;
+  background: none;
+  height: 30px;
+  margin-top: 11px;
+}
+
+.navbar .lang-call-us p {
+  position: relative;
+}
+
+.navbar .lang-call-us p::before {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: -18px;
+  border: 1px solid #e0dede;
+  height: 70px;
 }
 
 .navbar .logo {
-  font-size: 16px;
+  font-size: 14px;
+  margin-top: 5px;
 }
 
 .navbar .search-chart-account {
   display: flex;
 }
 
+.navbar .search-chart-account p {
+  position: relative;
+}
+
+.navbar .search-chart-account p::before {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 35px;
+  border: 1px solid #e0dede;
+  height: 70px;
+}
+
+.navbar .search-chart-account p::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  right: 111px;
+  border: 1px solid #e0dede;
+  height: 70px;
+}
+
 .navbar .search-chart-account p svg {
-  margin-right: 20px;
+  margin-right: 35px;
+  color: #aaa;
 }
 
 .navbar .search-chart-account p #acc {
   margin-left: 20px;
+  border: none;
+  background: none;
+  height: 30px;
+  margin-top: -7px;
 }
 
 .clearfix {
