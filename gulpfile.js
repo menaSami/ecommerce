@@ -13,17 +13,17 @@ var gulp        = require ('gulp'),
     lost        = require('lost');
 
 var files = {
-  title: 'project',
+  title: 'vue project',
   version: '1.0',
   desginer: {
     name: 'melad & mena',
-    url: 'www.jesus.com'
+    url: 'www.facebook.com/mena4sami'
   },
-  inSass: ['vindor/sass/*/*.scss', 'vindor/sass/*.scss' ],
-  outCss: 'puplic/css/',
-  css: 'puplic/css/',
-  outJs: 'puplic/js/',
-  inJs: 'vindor/js/*.js'
+  inSass: ['vendor/sass/*/*.scss', 'vendor/sass/*.scss' ],
+  outCss: 'public/css/',
+  css: 'public/css/',
+  outJs: 'public/js/',
+  inJs: 'vendor/js/*.js'
 };
 
 // Copyright
