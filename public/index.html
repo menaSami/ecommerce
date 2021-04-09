@@ -1,37 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Jesus | Christ</title>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="css/normlize.css" />
-    <link rel="stylesheet" href="css/style.css" />
+  <meta charset="utf-8" />
+  <title>Home | 1st ecommerce with Melad &amp; Mena together</title>
+
+  <link rel="stylesheet" href="css/normlize.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    
+
+  <!-- 
+    -- This the main app of vue.  
+    -->
+  <main id="app">
     <!-- NavBar Contact Us And Cart -->
     <div class="container">
-        <div class="navbar">
-            <div class="lang-call-us">
-                <img src="../puplic/img/british.jpg" alt="">
-                <select id="lang">
-                <option value="eng">ENG</option>
-                <option value="arb">Arb</option>
-                </select>
-                <p>Call Us Free:(555)172-244</p>
-            </div>
-            <div class="logo">
-                <h1>LANCER</h1>
-            </div>
-            <div class="search-chart-account">
-                <p> <i class="fas fa-search"></i> My Cart (2) <select  id="acc"><option value="account">My Account</option></select></p>
-            </div>
+      <div class="navbar">
+        <div class="lang-call-us">
+          <img src="/img/british.jpg" alt="this is img" />
+          <select id="lang">
+          <option value="eng">ENG</option>
+          <option value="arb">Arb</option>
+          </select>
+          <p>Call Us Free:(555)172-244</p>
         </div>
+        <div class="logo">
+          <h1>LANCER</h1>
+        </div>
+        <div class="search-chart-account">
+          <p> <i class="fas fa-search"></i> My Cart (2) <select  id="acc"><option value="account">My Account</option></select></p>
+        </div>
+      </div>
     </div>
-    <hr>
 
-   <!-- NavBar Heder List -->
-    <script src="js/fontawesome-all.min.js"></script>
-    <script src="js/vue.js"></script>
-    <script src="js/script.js"></script>
+    <hr />
+
+    <h1>{{ message }}</h1>
+  </main>
+
+  <!-- NavBar Heder List -->
+  <script src="js/fontawesome-all.min.js"></script>
+  <script src="js/vue.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
