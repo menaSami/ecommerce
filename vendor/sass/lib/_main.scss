@@ -1,0 +1,46 @@
+@import 'function';
+
+$white-color  : #f8f8f8;
+$black-color  : #383838;
+$pink-color   : #f24e86;
+$blue-color   : #02b4ff;
+$gray-color   : #acacac;
+$green-color  : #54d584;
+$yellow-color : #f4cf54;
+$red-color    : #ff5c5c;
+
+$link-color   : $blue-color;
+$main-color   : $yellow-color;
+
+:root {
+  --white-color  : #{$white-color};
+  --black-color  : #{$black-color};
+  --pink-color   : #{$pink-color};
+  --blue-color   : #{$blue-color};
+  --gray-color   : #{$gray-color};
+  --green-color  : #{$green-color};
+  --yellow-color : #{$yellow-color};
+  --red-color    : #{$red-color};
+  
+  --link-color   : #{$link-color};
+  --main-color   : #{$main-color};
+}
+
+// screens
+$xs: 400px;
+$sm: 675px;
+$md: 950px;
+$lg: 1225px;
+$xl: 1500px;
+
+$margin: 20px;
+$padding: 10px;
+
+.text-red {
+    color: $red-color;
+  }
+  
+  .text-main {
+    color: $main-color;
+  }
+  

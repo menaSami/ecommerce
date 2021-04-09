@@ -1,21 +1,34 @@
-//Start The Varible Of Sass
-@import 'library/function.scss';
+// import the main files
+@import 'inc/main';
+
+// Start The Varible Of Sass
 $maincolor: #6195FF;
-//The Freamwork
-body {
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-  background-color: white;
-}
-*, *:after, *:before {
-  box-sizing: border-box;
+
+/*
+ * The slide show options 
+ */
+.slideShow {
+  border: 1px solid $main-color;
+  width: 200px;
+  position: relative;
+  .item {
+    border: 1px solid $main-color;
+  }
+  .active {
+    border: 1px solid $red-color;
+    cursor: pointer;
+  }
+  .ul {
+    background-color: lawngreen;
+    position: absolute;
+    top: 00%;
+    left: 0;
+    width: inherit;
+  }
 }
 
 
-.container{
-  width: 80%;
-  margin: 0 auto;
-}
+// The Freamwork
 hr 
 {
   margin-top: -10px;
@@ -100,8 +113,5 @@ hr
     }
   }
 }
-
-
-.clearfix {clear: both;}
 
 //start the keyframes

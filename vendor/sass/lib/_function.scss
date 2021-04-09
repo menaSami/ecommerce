@@ -1,0 +1,200 @@
+// column
+@mixin column($in, $to, $mar: 20px) {
+  width: calc(100% * #{$in / $to} - (#{$mar} - #{$mar} * #{$in / $to}));
+  &:nth-child(1n) {
+    float: left;
+    margin-right: $mar;
+  }
+  &:nth-child(#{$to}n) {
+    float: right;
+    margin-right: 0;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}
+//function for img
+
+@mixin imgres($url, $ce: auto auto, $co: '')
+{
+  background: url('#{$url}') #{$ce};
+  @if ($co != '') {
+    background-size: $co;
+  }
+}
+
+///////////// 2021
+
+// min()
+// @include min(#{$minScreen + px}) {#{$prop}: #{$value};}
+@mixin min($min: 0) {
+  @media only screen and (min-width: $min + 1) {
+    @content;
+  }
+}
+
+// max()
+// @include max(#{$maxScreen + px}) {#{$prop}: #{$value};}
+@mixin max($max: 0) {
+  @media only screen and (max-width: $max) {
+    @content;
+  }
+}
+
+// bet()
+// @include bet(#{$minScreen + px}, #{$maxScreen + px}) {#{$prop}: #{$value};}
+@mixin bet($min, $max: 0) {
+  @media only screen and (min-width: $min + 1) and (max-width: $max) {
+    @content;
+  }
+}
+
+// clearFix
+// .clearFix { @include clearFix; }
+@mixin clearFix {
+  *zoom: 1;
+  &:after {
+    display: table;
+    content: '';
+    clear: both;
+  }
+}
+
+// center()
+// .container { @include center('', 20px); }
+@mixin center($maxWidth, $padding: '') {
+  @include clearFix;
+  @if ($maxWidth != '') {
+    max-width: $maxWidth;
+  }
+  margin-left: auto;
+  margin-right: auto;
+  @if ($padding != '') {
+    padding-left: $padding;
+    padding-right: $padding;
+  }
+}
+
+// column()
+// @include column(1, 2);
+// @include column(1, 5, 10px);
+@mixin column($in, $to, $margin: 20px) {
+  @if $margin == 0 {
+    @if ($in / $to) == 1 {
+      width: 100%;
+    } @else {
+      width: calc(100% * #{$in / $to});
+      &:nth-child(1n) {
+        float: left;
+        clear: none;
+      }
+      &:nth-child(#{$to}n), &.right { float: right; }
+      &:nth-child(#{$to}n + 1), &.last { clear: both; }
+    }
+  } @else {
+    @if ($in / $to) == 1 {
+      width: 100%;
+    } @else {
+      width: calc(100% * #{$in / $to} - (#{$margin} - #{$margin} * #{$in / $to}));
+      &:nth-child(1n) {
+        float: left;
+        clear: none;
+        margin-right: $margin;
+      }
+      &:nth-child(#{$to}n), &.right {
+        float: right;
+        margin-right: 0;
+      }
+      &:nth-child(#{$to}n + 1) { clear: both; }
+      &:last-child, &.last { margin-left: 0; }
+    }
+  }
+}
+
+// row()
+//  @include row(1, 2);
+//  @include row(1, 6, 10px, '');
+@mixin row($in, $to, $margin: 30px, $width: 100%) {
+  @if ($width != '') { width: $width; }
+  height: calc(100% * #{$in / $to} - (#{$margin} - #{$margin} * #{$in / $to}));
+  margin-bottom: $margin;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// align()
+// @include align(center);
+@mixin align($where) {
+  // default
+  $top    : auto;
+  $right  : auto;
+  $bottom : auto;
+  $left   : auto;
+  $tran1  : 0;
+  $tran2  : 0;
+  @if ($where == center or $where == middle-center) {
+      $top    : 50%;
+      $left   : 50%;
+      $tran1  : -50%;
+      $tran2  : -50%;
+  } @elseif ($where == left or $where == middle-left) {
+      $top    : 50%;
+      $left   : 0;
+      $tran1  : 0;
+      $tran2  : -50%;
+  } @elseif ($where == right or $where == middle-right) {
+      $top    : 50%;
+      $right  : 0;
+      $tran1  : 0;
+      $tran2  : -50%;
+  } @elseif ($where == top or $where == top-center) {
+      $top    : 0;
+      $left   : 50%;
+      $tran1  : -50%;
+  } @elseif ($where == bottom or $where == bottom-center) {
+      $bottom : 0;
+      $left   : 50%;
+      $tran1  : -50%;
+  } @elseif ($where == top-left) {
+      $top    : 0;
+      $left   : 0;
+  } @elseif ($where == top-right) {
+      $top    : 0;
+      $right  : 0;
+  } @elseif ($where == bottom-left) {
+      $bottom : 0;
+      $left   : 0;
+  } @elseif ($where == bottom-right) {
+      $right  : 0;
+      $bottom : 0;
+  }
+  position: relative;
+  & > * {
+    position: absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    transform : translate(#{$tran1}, #{$tran2});
+  }
+}
+
+// offset()
+@mixin offset($in, $to, $margin: 30px) {
+  @if ($in == -1) {
+    $in: -1/#{$to};
+  } @else {
+    $in: (-1/#{$to} * -1);
+  }
+  margin-left: calc(99.9% * #{$in} - (#{$margin} - #{$margin} * #{$in}) + #{$margin}) !important;
+}
+
+// respond
+// .container { @include respond(max-width, 300, 1100); }
+// body { @include respond(font-size, 12, 21); }
+@mixin respond($prop, $min, $max, $px: px) {
+  #{$prop}: calc(#{$min + $px} + #{$max - $min} * ((100vw - 420px) / 780));
+  @include min(1199px) {#{$prop}: #{$max + $px};}
+  @include max(420px) {#{$prop}: #{$min + $px};}
+}

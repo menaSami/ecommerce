@@ -1,0 +1,42 @@
+// import the main files
+@import '../lib/main';
+/* --------------------------------------------------------
+ * - Typograghy
+ * -------------------------------------------------------- */
+ html, body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: sans-serif; // for text
+    @include respond(font-size, 14, 16);
+  }
+  
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: sans-serif; // for heading..
+  }
+  
+  $aligns: [center, left, right];
+  @each $align in $aligns {
+    .align-#{$align} {
+      text-align: #{$align}
+    }
+  }
+  
+  $text-color: (main, $main-color), (black, $black-color),
+    (white, $white-color), (pink,  $pink-color ),
+    (blue,  $blue-color ), (green, $green-color),
+    (yellow, $yellow-color), (red,   $red-color  );
+  @each $btn, $clr in $text-color {
+    .text-#{$btn} {
+      color: $clr;
+    }
+  }
+  
+  a {
+    &.link, &[href^="http"], &[target="_blank"] {
+      text-decoration: underline;
+    }
+  }

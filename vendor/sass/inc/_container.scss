@@ -1,0 +1,14 @@
+// import the main files
+@import '../lib/main';
+/* --------------------------------------------------------
+ * - Containers
+ * -------------------------------------------------------- */
+.container {
+    margin: auto;
+    position: relative;
+    @include center(96%, 1%);
+    @include bet($sm, $md){ max-width: 94%; }
+    @include bet($md, $lg){ max-width: 92%; }
+    @include bet($lg, $xl){ max-width: 90%; }
+    @include min($xl){ max-width: 88%; }
+}

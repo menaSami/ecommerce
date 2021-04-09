@@ -1,0 +1,81 @@
+// import the main files
+@import '../lib/main';
+/* --------------------------------------------------------
+ * - Global rolls
+ * -------------------------------------------------------- */
+input, button {
+  outline: none;
+}
+
+ul, ol {
+ list-style: none;
+ padding: 0;
+ margin: 0;
+}
+
+a {
+  &, &:hover, &:active,
+  &:visited, &:focus {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+.hidden, [v-cloak] {
+  display: none;
+}
+
+.clearFix {
+  @include clearFix;
+}
+
+/* btns */
+.btn {
+  display: inline-block;
+  padding: 5px 10px;
+  cursor: pointer;
+  border: none;
+}
+
+$btns-color: (main, $main-color), (black, $black-color),
+  (white, $white-color), (pink,  $pink-color ),
+  (blue,  $blue-color ), (green, $green-color),
+  (yellow, $yellow-color), (red,   $red-color  );
+@each $btn, $bg in $btns-color {
+  .btn-#{$btn} {
+    @if $btn == white {
+      color: $black-color;
+      &:hover { background-color: mix(black, $bg, 10%) }
+      &, &:active { background-color: #{$bg} }
+    } @else {
+      color: $white-color;
+      &:hover { background-color: mix(white, $bg, 25%) }
+      &, &:active { background-color: #{$bg} }
+    }
+  }
+}
+
+a {
+  &, &:hover, &:active,
+  &:visited, &:focus {
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+  }
+  &.link {
+    &, &:hover, &:active,
+    &:visited, &:focus {
+      text-decoration: underline;
+      color: $link-color;
+      user-select: none;
+    }
+    &:hover {
+      color: mix($black-color, $link-color, 30%);
+    }
+  }
+}
