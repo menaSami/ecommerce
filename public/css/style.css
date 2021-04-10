@@ -2,6 +2,7 @@
  * vue project v1.0 Copyright &copy; 2021
  * All Desgin &amp; code by melad & mena | www.facebook.com/mena4sami
  */
+@charset "UTF-8";
 :root {
   --white-color: #f8f8f8;
   --black-color: #383838;
@@ -179,7 +180,6 @@ a.link:hover {
  * - Typograghy
  * -------------------------------------------------------- */
 html, body {
-  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -298,32 +298,48 @@ a.link, a[href^="http"], a[target="_blank"] {
 }
 
 /*
- * The slide show options 
+ * The options 
  */
-.slideShow {
+.options {
   border: 1px solid #f4cf54;
   width: 200px;
   position: relative;
 }
 
-.slideShow .item {
+.options .item {
   padding: 10px;
   border: 1px solid #f4cf54;
-}
-
-.slideShow .active {
-  border: 1px solid #ff5c5c;
   cursor: pointer;
 }
 
-.slideShow .ul {
-  display: block;
-  background-color: lawngreen;
+.options .selected {
+  border: 1px solid #ff5c5c;
+}
+
+.options .selected::after {
+  content: "↓";
+  display: inline-block;
   position: absolute;
-  top: 00%;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  font-size: 1.5em;
+}
+
+.options .active {
+  background-color: #02b4ff;
+}
+
+.options .ul {
+  display: none;
+  position: absolute;
+  top: 100%;
   left: 0;
   width: inherit;
-  height: 300%;
+}
+
+.options:hover .ul {
+  display: block;
 }
 
 hr {
