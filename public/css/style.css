@@ -15,14 +15,6 @@
   --main-color: #f4cf54;
 }
 
-.text-red {
-  color: #ff5c5c;
-}
-
-.text-main {
-  color: #f4cf54;
-}
-
 /* --------------------------------------------------------
  * - Global rolls
  * -------------------------------------------------------- */
@@ -183,27 +175,6 @@ a.link:hover {
   color: #128fc3;
 }
 
-:root {
-  --white-color: #f8f8f8;
-  --black-color: #383838;
-  --pink-color: #f24e86;
-  --blue-color: #02b4ff;
-  --gray-color: #acacac;
-  --green-color: #54d584;
-  --yellow-color: #f4cf54;
-  --red-color: #ff5c5c;
-  --link-color: #02b4ff;
-  --main-color: #f4cf54;
-}
-
-.text-red {
-  color: #ff5c5c;
-}
-
-.text-main {
-  color: #f4cf54;
-}
-
 /* --------------------------------------------------------
  * - Typograghy
  * -------------------------------------------------------- */
@@ -282,27 +253,6 @@ a.link, a[href^="http"], a[target="_blank"] {
   text-decoration: underline;
 }
 
-:root {
-  --white-color: #f8f8f8;
-  --black-color: #383838;
-  --pink-color: #f24e86;
-  --blue-color: #02b4ff;
-  --gray-color: #acacac;
-  --green-color: #54d584;
-  --yellow-color: #f4cf54;
-  --red-color: #ff5c5c;
-  --link-color: #02b4ff;
-  --main-color: #f4cf54;
-}
-
-.text-red {
-  color: #ff5c5c;
-}
-
-.text-main {
-  color: #f4cf54;
-}
-
 /* --------------------------------------------------------
  * - Containers
  * -------------------------------------------------------- */
@@ -357,6 +307,7 @@ a.link, a[href^="http"], a[target="_blank"] {
 }
 
 .slideShow .item {
+  padding: 10px;
   border: 1px solid #f4cf54;
 }
 
@@ -366,11 +317,13 @@ a.link, a[href^="http"], a[target="_blank"] {
 }
 
 .slideShow .ul {
+  display: block;
   background-color: lawngreen;
   position: absolute;
   top: 00%;
   left: 0;
   width: inherit;
+  height: 300%;
 }
 
 hr {

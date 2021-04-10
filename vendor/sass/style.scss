@@ -12,6 +12,7 @@ $maincolor: #6195FF;
   width: 200px;
   position: relative;
   .item {
+    padding: $padding;
     border: 1px solid $main-color;
   }
   .active {
@@ -19,11 +20,13 @@ $maincolor: #6195FF;
     cursor: pointer;
   }
   .ul {
+    display: block;
     background-color: lawngreen;
     position: absolute;
     top: 00%;
     left: 0;
     width: inherit;
+    height: 300%
   }
 }
 
