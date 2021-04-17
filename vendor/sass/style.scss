@@ -8,8 +8,7 @@ $maincolor: #6195FF;
  * The options 
  */
 .options {
-  border: 1px solid $main-color;
-  width: 200px;
+  width: 100px;
   position: relative;
   .item {
     padding: $padding;
@@ -25,7 +24,7 @@ $maincolor: #6195FF;
       top: 0;
       right: 0;
       padding: $padding;
-      font-size: 1.5em;
+      font-size: 1.3em;
     }
   }
   .active {

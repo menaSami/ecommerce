@@ -14,14 +14,18 @@
     -->
   <main id="app">
     <!-- NavBar Contact Us And Cart -->
-    <div class="container">
+    <!-- <div class="container">
       <div class="navbar">
+        <div class="options">
+          <div class="item selected"><img height="20" width="20" src="img/lang/en.jpg" alt="EN img" /> <span>EN</span></div>
+          <ul class="ul">
+            <li :class="['item', { 'active' : lang == 'en' }]" v-for="lang in ['en', 'ar']">
+              <img :src="'img/lang/'+ lang.toLowerCase() +'.jpg'" :alt="lang.toUpperCase() + 'img'"  height="20" width="30" />
+              <span>{{ lang.toUpperCase() }}</span>
+            </li>
+          </ul>
+        </div>
         <div class="lang-call-us">
-          <img src="img/british.jpg" alt="this is img" />
-          <select id="lang">
-            <option>ENG</option>
-            <option>Arb</option>
-          </select>
           <p>Call Us Free:(555)172-244</p>
         </div>
         <div class="logo">
@@ -31,22 +35,25 @@
           <p> <i class="fas fa-search"></i> My Cart (2) <select  id="acc"><option value="account">My Account</option></select></p>
         </div>
       </div>
-    </div>
+    </div> -->
+
+    <!-- 
+      -- The new Navgetion bar
+      -->
+    <nav style="border: 1px soild green;">
+      <div class="container">
+        THIS is the nav
+      </div>
+    </nav>
 
     <hr />
 
     <h1>{{ message }}</h1>
 
-    <div class="options">
-      <div class="item selected"><img height="20" width="20" src="img/british.jpg" alt="ENG img" /> <span>ENG</span></div>
-      <ul class="ul">
-        <li class="item active"><img height="20" width="20" src="img/british.jpg" alt="ENG img" /> <span>ENG</span></li>
-        <li class="item"><img height="20" width="20" src="img/british.jpg" alt="ARB img" /> <span>ARB</span></li>
-      </ul>
-    </div>
+    
   </main>
 
-  <!-- NavBar Heder List -->
+  <!-- The Javascript Files -->
   <script src="js/fontawesome-all.min.js"></script>
   <script src="js/vue.js"></script>
   <script src="js/script.js"></script>

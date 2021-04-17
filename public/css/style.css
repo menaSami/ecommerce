@@ -301,8 +301,7 @@ a.link, a[href^="http"], a[target="_blank"] {
  * The options 
  */
 .options {
-  border: 1px solid #f4cf54;
-  width: 200px;
+  width: 100px;
   position: relative;
 }
 
@@ -323,7 +322,7 @@ a.link, a[href^="http"], a[target="_blank"] {
   top: 0;
   right: 0;
   padding: 10px;
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 
 .options .active {
